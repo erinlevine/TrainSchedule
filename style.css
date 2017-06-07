@@ -10,8 +10,11 @@ h1 {
 }
 
 .jumbotron {
-/*    border-radius: 25px;*/
-    background-color:#62929E
+	border-radius: 25px;
+    background-color: #62929E;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
 }
 
 
@@ -22,11 +25,19 @@ h1 {
 */
 
 .table {
-   font-family: 'Roboto', sans-serif; 
-	margin:auto;
+   font-family: 'Roboto', sans-serif;
+
 }
 
 caption {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
+}
+
+.panel {
+	border-radius: 25px;
+/*    background-color: #62929E;*/
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
 }
