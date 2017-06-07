@@ -19,15 +19,14 @@ $("#click-button").on("click", function() {
       // Grabs user input
 	  var trainNameForm = $("#trainNameForm").val().trim();
 	  var destinationForm = $("#destinationForm").val().trim();
-		
-//	  var firstTrainTimeForm = moment($("#trainTimeForm").val().trim().format('HHmm'));
-//	  var frequencyForm = $("#frequencyForm").val().trim().format("mm");
+	  var trainTimeForm = moment($("#trainTimeForm").val().trim(), "HH:mm").format("HH:mm");
+//	  var frequencyForm = moment($("#frequencyForm").val().trim().format("mm"));
 
 	  // Creates local "temporary" object for holding inputs
 	  var newTrain = {
 		train: trainNameForm,
 		destination: destinationForm,
-//		first: firstTrainTimeForm,
+		first: trainTimeForm,
 //		frequency: frequencyForm
     };
 	//Setting the new values in the database
@@ -36,10 +35,12 @@ $("#click-button").on("click", function() {
 	//Console.logging to make sure the new data has been stored to the database
 	console.log(newTrain.train);
   	console.log(newTrain.destination);
+	console.log(newTrain.first);
 	
 	//Clearing the inputs
 	 $("#trainNameForm").val("");
   	 $("#destinationForm").val("");
+	 $("#trainTimeForm").val("");
 });
 
 //Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
@@ -50,9 +51,11 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Store everything into a variable.
   var trainName = childSnapshot.val().train;
   var trainDestination = childSnapshot.val().destination;
+  var trainTime = childSnapshot.val().first;
 	
   console.log(trainName);
   console.log(trainDestination);
+  console.log(trainTime);
 	
   //Adding into the table
   $("#trainScheduleTable > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td></tr>");
