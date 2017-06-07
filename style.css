@@ -1,0 +1,32 @@
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.pHeader {
+    text-align: center;
+    color: white;
+}
+
+.jumbotron {
+/*    border-radius: 25px;*/
+    background-color:#62929E
+}
+
+
+/*
+.wrapper {
+    background-image: url("http://i.imgur.com/BFBYJUV.jpg");
+}
+*/
+
+.table {
+   font-family: 'Roboto', sans-serif; 
+	margin:auto;
+}
+
+caption {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
