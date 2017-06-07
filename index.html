@@ -41,7 +41,7 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading">Current Train Schedule</div>
 		  <div class="panel-body">
-			<table class="table table-striped">
+			<table class="table table-striped" id="trainScheduleTable">
 				  <thead>
 					<tr>
 					  <th>Train Name</th>
@@ -51,6 +51,8 @@
 					  <th>Minutes Away</th>
 					</tr>
 				  </thead>
+				  <tbody>
+				  </tbody>
 			</table>
 		</div>
 		</div>
@@ -76,7 +78,7 @@
 						<label for="frequency">Frequency (min)</label>
 						<input type="text" class="form-control" id="frequencyForm">
 					  </div>
-					  <button type="submit" class="btn btn-default">Submit</button>
+					  <button type="submit" class="btn btn-default" id="click-button">Submit</button>
 					</form>
 				</div>
 			</div>
