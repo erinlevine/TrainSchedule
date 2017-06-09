@@ -74,8 +74,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var frequencyMinutes = childSnapshot.val().frequency;
 	console.log("Frequency Minutes: " + frequencyMinutes);
   
-  var minutesAway = timeDifference % frequencyMinutes;
-	console.log("Minutes Away: " + minutesAway);
+  var minutesAway = Math.abs(timeDifference % frequencyMinutes);
+  	console.log("Minutes Away: " + minutesAway);
   
   var nextArrival = moment(currentTime).add(minutesAway, "minutes").format("hh:mm A");
 	console.log("Next Arrival: " + nextArrival);
