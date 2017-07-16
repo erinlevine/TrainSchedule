@@ -15,4 +15,6 @@ To read more about the creation of this Train Schedule homework, check out my bl
 
 <img src="http://www.exactlyerin.com/wp-content/uploads/2017/06/Screen-Shot-2017-06-08-at-4.51.36-PM.png">
 
+Try it out for yourself by clicking <a href="https://erinlevine.github.io/TrainSchedule/">here!</a>
+
 
